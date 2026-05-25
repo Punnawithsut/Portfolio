@@ -1,16 +1,11 @@
 import { CardBlock } from "@/components/Card";
+import { HeroSection } from "@/components/Hero";
 import { NavigationBar } from "@/components/Navbar";
 
 export default function Test() {
     return (
-        <div className="flex min-h-screen w-full items-center justify-center">
-            <NavigationBar />
-            <CardBlock
-                imgUrl={null}
-                cardTitle="loren"
-                cardDescription="loren ipsum loren ipsum"
-                badgeText="feature"
-            />
+        <div className="min-h-screen w-full items-center justify-center">
+            <HeroSection></HeroSection>
         </div>
     );
 }
