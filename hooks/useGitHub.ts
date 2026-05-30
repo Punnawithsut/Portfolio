@@ -1,10 +1,11 @@
 "use client";
 
+import { ContributionCalendar, Repo } from "@/types/github";
 import { useEffect, useState } from "react";
 
 export function useGitHub() {
-    const [calendar, setCalendar] = useState(null);
-    const [repos, setRepos] = useState(null);
+    const [calendar, setCalendar] = useState<ContributionCalendar | null>(null);
+    const [repos, setRepos] = useState<Repo[] | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 

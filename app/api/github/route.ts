@@ -14,6 +14,8 @@ async function fetchCalendar() {
       query: `query($username: String!) {
         user(login: $username) {
           contributionsCollection {
+            totalCommitContributions
+            restrictedContributionsCount
             contributionCalendar {
               totalContributions
               weeks {
