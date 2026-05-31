@@ -9,7 +9,7 @@ export const CONTRIBUTION_COLORS: Record<number, string> = {
 
 export const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-export const LEGEND_LEVEL = [0, 1, 2, 3, 4, 5];
+export const LEGEND_LEVELS = [0, 1, 2, 3, 4, 5];
 
 export function getContributionLevel(cnt: number): number {
     if(cnt == 0) return 0;
