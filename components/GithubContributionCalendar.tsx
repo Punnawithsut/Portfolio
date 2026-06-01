@@ -7,6 +7,7 @@ import {
   MONTHS,
   getContributionLevel,
 } from "@/lib/github.config";
+import { dateFormat } from "@/lib/utils";
 import { ContributionDay, ContributionWeek } from "@/types/github";
 import React from "react";
 
@@ -38,13 +39,22 @@ export function GitHubContributionCalendar() {
 
   return (
     <div className="w-full h-full">
-      <div className="flex flex-wrap gap-3 mb-5">
+        
+      <div className="flex flex-wrap justify-between gap-3 mb-10 ml-10 mr-10">
+        <div className="">
+            <div className="text-2xl font-bold">
+                Contribution Activity
+            </div>
+            <div className="text-xl">
+                {`${dateFormat(weeks[0].contributionDays[0].date)} - ${dateFormat(weeks[weeks.length - 1].contributionDays[weeks[weeks.length - 1].contributionDays.length - 1].date)}`}
+            </div>
+        </div>
         <div className="bg-secondary rounded-lg px-4 py-2.5">
           <div className="text-2xl font-medium">
             {calendar.totalContributions.toLocaleString()}
           </div>
-          <div className="text-xs text-muted-foreground">
-            Contributions this year
+          <div className="text-xl text-muted-foreground">
+            Total Contribution
           </div>
         </div>
       </div>
@@ -155,7 +165,7 @@ export function GitHubContributionCalendar() {
         </div>
       </div>
 
-      <div className="flex items-center gap-1.5 mt-2 justify-end text-[13px] text-muted-foreground">
+      <div className="flex items-center gap-1.5 mt-2 justify-end text-[13px] text-muted-foreground mr-15">
         <span>Less</span>
         {LEGEND_LEVELS.map((l) => (
           <div
@@ -168,7 +178,7 @@ export function GitHubContributionCalendar() {
       </div>
 
       <div className="mt-8 ml-8 mr-8 mb-10">
-        <h3 className="text-[15px] font-medium mb-3">Recently pushed</h3>
+        <div className="text-2xl mb-10 font-bold">Recently pushed</div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
           {repos.map((repo) => (
             <a
