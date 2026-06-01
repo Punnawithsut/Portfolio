@@ -50,7 +50,7 @@ export function GitHubContributionCalendar() {
       </div>
 
       <div className="flex justify-center mt-6">
-        <div className="overflow-x-auto max-w-full">
+        <div className="overflow-x-auto max-w-full pb-2 pt-6">
           <div className="inline-flex min-w-max">
             <div className="flex flex-col gap-[4px] mr-1 text-[11px] text-muted-foreground mt-5">
               {["", "Mon", "", "Wed", "", "Fri", ""].map((day, index) => (
