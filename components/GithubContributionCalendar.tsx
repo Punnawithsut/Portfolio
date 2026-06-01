@@ -2,13 +2,33 @@
 
 import { useGitHub } from "@/hooks/useGitHub";
 import { CONTRIBUTION_COLORS, LEGEND_LEVELS, MONTHS, getContributionLevel } from "@/lib/github.config";
-import { ContributionDay } from "@/types/github";
+import { ContributionDay, ContributionWeek } from "@/types/github";
 import React from "react";
+
+//reconstruct week so that different month will appear as serperate array -> e.g. orig contain 06-30-2026, 07-1-2021 then seperate this array into two array with size != 7
+const formatWeeks = (weeks: ContributionWeek[]): ContributionWeek[] => {
+    const formattedWeeks: ContributionWeek[] = [];
+    weeks.map((week: ContributionWeek, weekIndex) => {
+        if(week.contributionDays.length <= 0) return;
+        const origMonth = new Date(week.contributionDays[0].date).getMonth();
+        const origMonthArr: ContributionWeek = { contributionDays: [] };
+        const diffMonthArr: ContributionWeek = { contributionDays: [] };
+        week.contributionDays.map((day: ContributionDay, dayIndex) => {
+            const currMonth = new Date(day.date).getMonth();
+            if(currMonth === origMonth) origMonthArr.contributionDays.push(day);
+            else diffMonthArr.contributionDays.push(day);
+        })
+        formattedWeeks.push(origMonthArr);
+        formattedWeeks.push(diffMonthArr);
+    })
+    return formattedWeeks;
+}
 
 export function GitHubContributionCalendar() {
     const { calendar, repos, loading } = useGitHub();
     if (loading || !calendar || !repos) return <p className="text-sm text-muted-foreground">Loading...</p>;
-    const weeks = calendar.weeks;
+    const weeks = formatWeeks(calendar.weeks);
+    console.log(weeks)
 
     return (
         <div className="w-full h-full">
