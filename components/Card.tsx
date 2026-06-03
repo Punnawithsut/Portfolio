@@ -66,8 +66,8 @@ export function CardBlock({
         <CardDescription>{cardDescription}</CardDescription>
       </CardHeader>
       <CardFooter>
-        <Button className="w-full cursor-pointer" variant={"secondary"}>
-          <Link href={`${linkHref}`}>View Project</Link>
+        <Button className="w-full cursor-pointer" variant={"secondary"} asChild>
+          <Link className="flex justify-center items-center w-full" href={`${linkHref}`}>View Project</Link>
         </Button>
       </CardFooter>
     </Card>
