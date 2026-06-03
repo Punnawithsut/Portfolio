@@ -14,6 +14,7 @@ export function HighlightedProjects() {
                     cardTitle="SignGo"
                     imgUrl="/images/signGo2.png"
                     badgeVariant="default"
+                    linkHref="https://github.com/Punnawithsut/SignGo"
                 />
                 {
                 //wait for KU-SOC confirm
@@ -31,6 +32,7 @@ export function HighlightedProjects() {
                     cardTitle="NAPROCK 17th"
                     imgUrl="/images/NAPROCK.webp"
                     badgeVariant="destructive"
+                    linkHref="https://github.com/Punnawithsut/NAPROCK17th"
                 />
                 <CardBlock
                     badgeText="Rust + Vue"
@@ -38,6 +40,7 @@ export function HighlightedProjects() {
                     cardTitle="QuikScore"
                     imgUrl=""
                     badgeVariant="link"
+                    linkHref="https://github.com/itscrystalline/quikscore"
                 />
                 <CardBlock
                     badgeText="React + Express.js"
@@ -45,6 +48,7 @@ export function HighlightedProjects() {
                     cardTitle="Chat App"
                     imgUrl="/images/quickChat.png"
                     badgeVariant="ghost"
+                    linkHref="https://github.com/Punnawithsut/CHAT-APP"
                 />
             </div>
         </div>

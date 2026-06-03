@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CardBlockProps {
   imgUrl: string | null;
@@ -25,6 +26,7 @@ interface CardBlockProps {
     | "destructive"
     | null
     | undefined;
+  linkHref?: string;
 }
 
 export function CardBlock({
@@ -33,6 +35,7 @@ export function CardBlock({
   cardDescription,
   badgeText,
   badgeVariant = "secondary",
+  linkHref,
 }: CardBlockProps) {
   return (
     <Card className="w-full overflow-hidden">
@@ -64,7 +67,7 @@ export function CardBlock({
       </CardHeader>
       <CardFooter>
         <Button className="w-full cursor-pointer" variant={"secondary"}>
-          View Project
+          <Link href={`${linkHref}`}>View Project</Link>
         </Button>
       </CardFooter>
     </Card>
