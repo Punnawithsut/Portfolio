@@ -25,9 +25,14 @@ export function HeroSection() {
 
         <div className="flex flex-row justify-between gap-3 mt-6">
           <Button size={"default"}>View My Projects</Button>
-          <Button variant={"secondary"} size={"default"}>
-            Download Resume
-          </Button>
+          <a
+            href={`/files/Template_Resume.pdf`}
+            download="Template_Resume.pdf"
+          >
+            <Button variant={"secondary"} size={"default"}>
+              Download Resume
+            </Button>
+          </a>
         </div>
       </div>
     </div>

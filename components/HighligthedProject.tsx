@@ -38,7 +38,7 @@ export function HighlightedProjects() {
                     badgeText="Rust + Vue"
                     cardDescription="An OCR pipeline with a high-performance Rust backend, employing image compression and parallel computation to significantly reduce processing time and improve accuracy."
                     cardTitle="QuikScore"
-                    imgUrl=""
+                    imgUrl="/images/quikScore.jpg"
                     badgeVariant="link"
                     linkHref="https://github.com/itscrystalline/quikscore"
                 />
