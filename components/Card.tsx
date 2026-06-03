@@ -35,7 +35,7 @@ export function CardBlock({
   badgeVariant = "secondary",
 }: CardBlockProps) {
   return (
-    <Card className="mx-auto w-full max-w-sm overflow-hidden">
+    <Card className="w-full overflow-hidden">
       <div className="relative aspect-video w-full bg-muted flex items-center justify-center">
         {imgUrl ? (
           <>
