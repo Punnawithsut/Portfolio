@@ -39,7 +39,6 @@ export function CardBlock({
       <div className="relative aspect-video w-full bg-muted flex items-center justify-center">
         {imgUrl ? (
           <>
-            <div className="absolute inset-0 z-10 bg-black/35" />
             <Image src={imgUrl} alt={cardTitle} fill className="object-cover" />
           </>
         ) : (

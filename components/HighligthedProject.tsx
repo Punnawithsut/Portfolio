@@ -12,7 +12,7 @@ export function HighlightedProjects() {
                     badgeText="React Native"
                     cardDescription="A sign language translation app that interfaces with a custom-built SignGlove via BLE, leveraging edge computing with a GRU model to deliver real-time, low-latency gesture recognition."
                     cardTitle="SignGo"
-                    imgUrl=""
+                    imgUrl="/images/signGo2.png"
                     badgeVariant="default"
                 />
                 {
@@ -29,7 +29,7 @@ export function HighlightedProjects() {
                     badgeText="C++"
                     cardDescription="A competitive programming project focused on algorithmic optimization, utilizing GPU acceleration, multi-threading, and advanced performance techniques to maximize throughput."
                     cardTitle="NAPROCK 17th"
-                    imgUrl=""
+                    imgUrl="/images/NAPROCK.webp"
                     badgeVariant="destructive"
                 />
                 <CardBlock
@@ -43,7 +43,7 @@ export function HighlightedProjects() {
                     badgeText="React + Express.js"
                     cardDescription="A real-time chat application built with WebSockets for live messaging and cloud storage integration for seamless image file sharing."
                     cardTitle="Chat App"
-                    imgUrl=""
+                    imgUrl="/images/quickChat.png"
                     badgeVariant="ghost"
                 />
             </div>
