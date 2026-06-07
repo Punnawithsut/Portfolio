@@ -65,7 +65,8 @@
 
   --animate-in: in 0.2s ease-out;
   --animate-out: out 0.2s ease-in;
-  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee: marquee 90s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 90s linear infinite;
 
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
@@ -88,6 +89,15 @@
   @keyframes out {
     from { opacity: 1; transform: scale(1); }
     to { opacity: 0; transform: scale(0.95); }
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
   }
 }
 
