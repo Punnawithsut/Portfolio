@@ -65,6 +65,7 @@
 
   --animate-in: in 0.2s ease-out;
   --animate-out: out 0.2s ease-in;
+  --animate-marquee: marquee 30s linear infinite;
 
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
