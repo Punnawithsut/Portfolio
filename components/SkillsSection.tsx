@@ -3,7 +3,7 @@ import { SKILL_GROUPS } from "@/lib/skills.config";
 
 export function SkillsSection() {
     return (
-        <div className="w-full py-16 flex flex-col items-center">
+        <div className="w-full py-16 flex flex-col items-center px-10">
             <div className="text-2xl font-bold text-center mb-10">Skills</div>
             <div className="flex flex-col gap-8 w-full max-w-3xl">
                 {SKILL_GROUPS.map((group, groupIndex) => (
